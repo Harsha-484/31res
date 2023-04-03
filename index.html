@@ -1,0 +1,366 @@
+
+
+<head>
+<title>Vignan University::Vadlamudi, Guntur Dist., Andhra Pradesh, India.</title>
+<style type='text/css'>
+.table td, .table th		{font-size:9pt;line-height:20px;}
+.table						{border-collapse:collapse;text-transform: uppercase;}
+</style>
+
+
+<script type="text/javascript">
+                 function Captcha(){
+                     var alpha = new Array('A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z');
+                     var i;
+                     for (i=0;i<6;i++){
+                       var a = alpha[Math.floor(Math.random() * alpha.length)];
+                       var b = alpha[Math.floor(Math.random() * alpha.length)];
+                       var c = alpha[Math.floor(Math.random() * alpha.length)];
+                       var d = alpha[Math.floor(Math.random() * alpha.length)];
+                       var e = alpha[Math.floor(Math.random() * alpha.length)];
+                       var f = alpha[Math.floor(Math.random() * alpha.length)];
+                       var g = alpha[Math.floor(Math.random() * alpha.length)];
+                      }
+                    var code = a + ' ' + b + ' ' + ' ' + c + ' ' + d + ' ' + e + ' '+ f + ' ' + g;
+                    document.getElementById("mainCaptcha").value = code
+                  }
+                  function ValidCaptcha(){
+                      var string1 = removeSpaces(document.getElementById('mainCaptcha').value);
+                      var string2 = removeSpaces(document.getElementById('txtInput').value);
+                      if (string1 == string2){
+                       getResult();
+					   
+                      }
+                      else{        
+                        alert("Enter Correct CAPTCHA. \nNo need to enter the space between the letters.");
+                      }
+                  }
+                  function removeSpaces(string){
+                    return string.split(' ').join('');
+                  }
+             </script> 
+
+
+
+<script language="javaScript">
+var xmlhttp;
+function getResult()
+{
+	//alert("hi");
+	var ht = document.result.hallticket.value;
+	var pat = / /gi;
+	ht = ht.replace(pat,"");
+	document.result.hallticket.value=ht;
+	if(ht.length=10)
+	{
+		xmlhttp=GetXmlHttpObject();
+		if (xmlhttp==null)
+		{
+			alert ("Your browser does not support AJAX!");
+			return;
+		}
+		var url="results.asp?exam=BTECH_R19_3YEAR_1SEM_REG_December_2022";
+		url=url+"&ht="+ht;
+		//alert(url);
+		xmlhttp.onreadystatechange=stateChanged;
+		xmlhttp.open("GET",url,true);
+		xmlhttp.send(null);
+	}
+}
+function stateChanged()
+{
+	if (xmlhttp.readyState==4)
+	{
+		//alert(xmlhttp.responseText);
+		document.getElementById("res").innerHTML = xmlhttp.responseText;
+		//document.result.reset();
+		result.hallticket.value="";
+		result.txtInput.value="";
+		Captcha();
+	}
+}
+function GetXmlHttpObject()
+{
+	if (window.XMLHttpRequest)
+	{
+		return new XMLHttpRequest();
+	}
+	if (window.ActiveXObject)
+	{
+		return new ActiveXObject("Microsoft.XMLHTTP");
+	}
+	return null;
+}
+</script>
+</head>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Vignan University::Vadlamudi, Guntur Dist., Andhra Pradesh, India.</title>
+<meta name="description" content="vignan University, Vignan's Engineering College, Vadlamudi" />
+<meta name="keywords" content="Vignan,University,Engineering,about vignan, Future students, VEC,Vadlamudi,Guntur,Andhra Pradesh, A.P.,admissions,India" />
+<meta name="author" content="Vignan CSE 2009  /" />
+<link href="../cssnew/stylenew1.css" rel="stylesheet" type="text/css" />
+<LINK href="../cssnew/template.css" type=text/css rel=stylesheet />
+<LINK href="../cssnew/constant.css" type=text/css rel=stylesheet />
+<link rel="stylesheet" href="./Mastosav/lightbox.css" type="text/css" media="screen" />
+<script type="text/javascript" src="./Mastosav/lightbox.js"></script>
+
+<LINK rel="stylesheet" type="text/css" href="../cssnew/primary.css">
+<SCRIPT src="../cssnew/mootools.js" type="text/javascript"></SCRIPT>
+<SCRIPT src="../cssnew/carousel.js" ></SCRIPT>
+
+
+<script language="JavaScript">
+<!--
+function MM_controlSound(x, _sndObj, sndFile) { //v3.0
+if (navigator.appName == 'Microsoft Internet Explorer' )
+ {
+	var ver=navigator.appVersion;
+	if(ver.match("MSIE 7.0"))
+	{
+var i, method = "", sndObj = eval(_sndObj);
+if (sndObj != null) {
+if (navigator.appName == 'Netscape') method = "play";
+else {
+if (window.MM_WMP == null) {
+window.MM_WMP = false;
+for(i in sndObj) if (i == "ActiveMovie") {
+window.MM_WMP = true; break;
+} }
+if (window.MM_WMP) method = "play";
+else if (sndObj.FileName) method = "run";
+} }
+if (method) eval(_sndObj+"."+method+"()");
+else window.location = sndFile;
+}
+}
+}
+//-->
+</script>
+<style>
+    div#header, div#footer
+   {
+        position:relative;
+	width: 1003px;
+	margin-top: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align:left;
+   }
+   #menu td
+   {
+	text-align:center;
+	font-family:arial;
+	font-weight:bold;
+	font-size:11px;
+   }
+   .seperate
+   {
+	border-right:2px white solid;
+   }
+
+a:hover
+{
+  color:red;
+}
+	
+  #page{
+   border-top:silver 1px solid;
+   border-right:silver 1px solid;
+   border-bottom:silver 1px solid;
+   border-left:silver 1px solid;
+   width:1000px;
+   
+   background-color:white;
+ }
+
+ #header1{
+
+    border-bottom:silver 1px solid;
+	
+ }
+
+
+ #header1 A:link
+ {
+   color:black;
+ }
+
+ #header1 A:visited
+ {
+   color:#800517;
+ }
+
+ #header1 A:hover
+ {
+   color:blue;
+ }
+
+h2 { 
+	padding-bottom: 4px;
+	border-bottom: solid #455A79 1px;
+	font-size: 12px; 
+	color : #455A79; 
+	font-weight:bold;
+	font-family: verdana, "Microsoft Sans Serif", Times, serif;
+	margin:0 20px 0 20px;
+  	
+}
+ 
+</style>
+<script>
+      function submitForm() {
+        // Prevent the form from submitting normally
+        event.preventDefault();
+
+        // Get the value of the input field
+        var inputValue = document.getElementById("input").value;
+
+        // Check if the input value matches the desired value
+        if (inputValue === "201FA04248") {
+          // Redirect to the desired URL
+          window.location.href = "k1.html";
+        }
+      }
+    </script>
+
+<script>
+	function vu()
+	{	
+		var username,password;
+		username=document.getElementById("username").value;
+		password=document.getElementById("password").value;
+		if(username.length==0)
+		{
+			alert("User-Id Should Not Be Empty");
+			document.getElementById("username").focus();
+			return false;
+		}
+		else 
+		{	
+			   for (var i = 0; i < username.length; i++) 
+			   {
+						if (spchar.indexOf(username.charAt(i)) != -1) 
+						{
+						 alert ("Userid should not have special characters");
+						 return false;
+						}
+			   }
+	   }
+		if(password.length==0)
+		{
+			alert("Password Should Not Be Empty");
+			document.getElementById("password").focus();
+			return false;
+		}
+		document.loginformtop.action="http://210.212.223.133/client_ctrl?session=login";
+		document.loginformtop.submit();
+	}
+</script>
+
+<style type="text/css">
+
+#footer-footer {
+	line-height: 125% !important;
+}
+.footer-footer-cell {
+	padding: 150px 0 0 0 !important;
+	text-align: center;
+	
+}
+
+</style>
+</head>
+<body style="text-align:center;margin:0;background:#E5E5E5" onload="Captcha();">
+
+	
+	
+
+
+
+		  
+		  
+		    
+
+<!--
+ <BR><h2 style="width:900px;color:#e95e01;font-family:Verdana, Arial, Helvetica, sans-serif;
+font-size:11px;font-weight:bold;">Results</h2> 
+			 <IMG SRC="WEB/yline.jpg" WIDTH="500" HEIGHT="2" BORDER="0" ALT="">-->
+
+
+  <div id="page">
+
+
+
+
+<div align=justify><BR></div>
+<div align=justify><BR></div>
+
+<div id="header1">
+<form name="result"  method="post">
+<br>
+<center>
+		<h2 style='font-size:13pt;font-weight:bold;text-transform:uppercase;'>BTECH-R19-3YEAR-1SEM-REG-December-2022</h2>
+		</p>
+		<table class="Table1" border="0" cellpadding="10" cellspacing='10' width='80%' bgcolor="#eeeeee">
+		<tr><td bgcolor="#717d7d" colspan='2' align='center' style='line-height:20px;'><font style="font-size: 18px;" color="#ffffff">RESULTS</font></td></tr>
+		<tr><td align='right' width='50%'><br><font style="font-size: 10pt;"><b>HALLTICKET NUMBER &nbsp;&nbsp;&nbsp;</th><th align="left"><br><input NAME="hallticket" id="input" maxlength="10" size="16" style='text-transform:uppercase;' ></th></tr>
+
+		
+          <!--<tr>
+           <td align='right' width='50%'>
+             <input type="text" id="mainCaptcha" readonly/></th><th align="left">
+              <input type="button" id="refresh" value="Refresh" onclick="Captcha();" />
+          </th></tr>-->
+
+<tr><td align='right' width='50%'><font style="font-size: 10pt;"><b>ENTER THE CODE BELOW &nbsp;&nbsp;&nbsp;</th><th align="left"><input type="text" id="mainCaptcha" readonly/><input type="button" id="refresh" value="Refresh" onclick="Captcha();" /></th></tr>
+
+
+
+
+		  <tr><td align='right' width='50%'><font style="font-size: 10pt;"><b> &nbsp;&nbsp;&nbsp;</th><th align="left"><input type="text" id="txtInput" name="txtInput"/></th></tr>
+
+		  <!--<tr>
+           <td>
+                Enter the Code shown above<br />
+           </td>
+		    <td>
+            <input type="text" id="txtInput" name="txtInput"/>    
+          </td>
+          </tr>
+          
+         <tr>
+          <td>
+            <input id="Button1" type="button" value="Check" onclick="alert(ValidCaptcha());"/>
+          </td>
+        </tr>-->
+
+
+		<tr><td align="right"><br><input TYPE="button"" value="Submit" style="background-color: #336699; color: #ffffff;" onClick="submitForm();" onClick="ValidCaptcha();">
+			<th align='left'><br><input name="reset1" value="Reset" type="reset" style="background-color: #336699; color: #ffffff;"></th></tr>
+		</table>
+		<br>
+<span id='res'>	</span>
+</center>
+<div align=justify><BR></div>
+<div align=justify><BR></div> 
+
+
+</div>
+
+
+ 
+  </div>
+
+ <!-- <div class="footer-footer-cell" >
+ <div id="footer-footer" >
+ <hr size=1 color=lightgrey>
+	<font size=1 style="font-family:verdana;color:green;">&copy;All Rights Reserved to VFSTR, Developed by CSE 2009.</font>
+	
+
+</div></div> -->
+
+
+ </body>
+</html>
