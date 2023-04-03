@@ -212,16 +212,22 @@ h2 {
 <script>
       function submitForm() {
         // Prevent the form from submitting normally
-        event.preventDefault();
+        const form = document.getElementById("my-form");
 
-        // Get the value of the input field
-        var inputValue = document.getElementById("input").value;
+  form.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+     var inputValue = document.getElementById("input").value;
 
         // Check if the input value matches the desired value
         if (inputValue === "201FA04248") {
           // Redirect to the desired URL
           window.location.href = "/form-submitted";
         }
+  });
+
+        // Get the value of the input field
+       
       }
     </script>
 
@@ -298,7 +304,7 @@ font-size:11px;font-weight:bold;">Results</h2>
 <div align=justify><BR></div>
 
 <div id="header1">
-<form name="result"  method="post">
+<form name="result"  id="my-form" method="post">
 <br>
 <center>
 		<h2 style='font-size:13pt;font-weight:bold;text-transform:uppercase;'>BTECH-R19-3YEAR-1SEM-REG-December-2022</h2>
